@@ -7,6 +7,10 @@ canvas.height = 768;
 c.fillStyle = '#fff';
 c.fillRect(0, 0, canvas.width, canvas.height);
 
+let msPrev = window.performance.now();
+let fps = 60;
+let fpsInterval = 1000 / fps;
+
 const placementTilesData2D = [];
 
 for (let i = 0; i < placementTilesData.length; i += 20) {
@@ -60,6 +64,11 @@ spawnEnemies(enemyCount);
 
 const animate = function () {
    const animationId = requestAnimationFrame(animate);
+
+   const msNow = window.performance.now();
+   const elapsed = msNow - msPrev;
+   if (elapsed < fpsInterval) return;
+   msPrev = msNow - (elapsed % fpsInterval);
 
    c.drawImage(image, 0, 0);
 
