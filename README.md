@@ -1,1 +1,1 @@
-Tower Defense Game using Javascript Canvas
+Tower Defense Web Game using Canvas Javascript
