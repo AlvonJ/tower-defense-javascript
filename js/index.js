@@ -132,6 +132,8 @@ const animate = function () {
 
          // This is when a projectile hits an enemy
          if (distance < projectile.enemy.radius + projectile.radius) {
+            audio.hit.play();
+
             // Enemy health and enemy removal
             projectile.enemy.health -= 20;
             if (projectile.enemy.health <= 0) {
@@ -203,3 +205,6 @@ window.addEventListener('mousemove', function (event) {
       }
    }
 });
+
+// BACKGROUND MUSIC
+audio.backgroundMusic.play();
