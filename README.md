@@ -2,7 +2,7 @@
 
 Web Tower Defense game built using Canvas JavaScript.
 
-## Techologies
+## Technologies
 
 - HTML
 - CSS
